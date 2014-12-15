@@ -7,9 +7,9 @@ def rgb2Hex(r,g,b):
     gh = hex(g)
     bh = hex(b)
     
-    #hex values need to be 2 characters each
+    #hex values need to be 2 characters each, but 0-A is only 1 character
     if len(rh)<4:
-        rh = "0"+rh[2:]
+        rh = "0"+rh[2:] #[2:] gets rid of the 0x
     else:
         rh = rh[2:]
         
