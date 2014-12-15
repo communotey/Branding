@@ -30,7 +30,8 @@ Note: To be accurate with the colours of the institution that you would like to 
 ####Icon without border
 
 Use the inverted template:
-![inverted template](/Colour%20Schemes/Templates/logo_bw_invert.png)
+
+->![inverted template](/Colour%20Schemes/Templates/logo_bw_invert.png)<-
 
 1. Fill in the black parts inside the triangle
 2. Fill in the outside of the triangle with white
@@ -42,7 +43,7 @@ Use the inverted template:
 
 The official colours are as follows:
 
-![Colour map](/Colour%20Schemes/logo_bw_label.png)
+->![Colour map](/Colour%20Schemes/logo_bw_label.png)<-
 
 1. The green section: rgb(34,177,76)
 2. The red section: rgb(237,28,36)
