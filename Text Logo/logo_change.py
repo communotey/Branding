@@ -6,20 +6,37 @@ def rgb2Hex(r,g,b):
     rh = hex(r)
     gh = hex(g)
     bh = hex(b)
-    hexColour = ""+rh[2:] + gh[2:] + bh[2:]
+    
+    #hex values need to be 2 characters each
+    if len(rh)<4:
+        rh = "0"+rh[2:]
+    else:
+        rh = rh[2:]
+        
+    if len(gh)<4:
+        gh = "0"+gh[2:]
+    else:
+        gh = gh[2:]
+        
+    if len(bh)<4:
+        bh = "0"+bh[2:]
+    else:
+        bh = bh[2:]
+    
+    hexColour = "" + rh + gh + bh
     return hexColour
 
-###############################################
-def changeTree(top, sides, middle, background):
+#######################################
+def changeTree(top, sides, background):
     tree = ET.parse("triangle_empty.svg")
-                    
+    ET.register_namespace("","http://www.w3.org/2000/svg")
     for element in tree.iter():
         if element.get('id') == 'sides':
             element.set('fill', sides)
             element.set('stroke', background)
 
-        elif element.get('id') == 'middle':
-            element.set('fill', middle)
+        elif element.get('id') == 'bottom':
+            element.set('fill', top)        #make top/bottom same colour
             element.set('stroke', background)
 
         elif element.get('id') == 'top':
@@ -29,13 +46,12 @@ def changeTree(top, sides, middle, background):
 
 #########################################################
 #if given rgb, you have to convert it to hex and it's fun
-def changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4):
+def changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3):
     top = rgb2Hex(r1,g1,b1)  #top
     sides = rgb2Hex(r2,g2,b2)  #sides
-    middle = rgb2Hex(r3,g3,b3)  #middle
-    background = rgb2Hex(r4,g4,b4)  #line should be your background colour
+    background = rgb2Hex(r3,g3,b3)  #line should be your background colour
     
-    path = "triangle_"+top+ "_"+sides+"_"+middle+"_"+background+".svg"
+    path = "triangle_"+top+ "_"+sides+"_"+background+".svg"
     if exists(path):
         #if this is true, the file exists; no reason to make another
         print "The image exists"
@@ -46,19 +62,23 @@ def changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4):
         #I only left them in there to make the path
         top = "#" + top
         sides = "#" + sides
-        middle = "#" + middle
         background = "#" + background
 
-        tree = changeTree(top, sides, middle, background)
+        tree = changeTree(top, sides, background)
         tree.write(path)
         
         
 ##################################################
 #if given the hex values, deal with the hex values
-def changePicHex(top, sides, middle, background):
+def changePicHex(top, sides, background):
 
+    #lower case for standards sake
+    top = top.lower()
+    sides = sides.lower()
+    background = background.lower()
+    
     #cut out the hash
-    path = "triangle_"+top[1:]+ "_"+sides[1:]+"_"+middle[1:]+"_"+background[1:]+".svg"
+    path = "triangle_"+top[1:]+ "_"+sides[1:]+"_"+background[1:]+".svg"
     if exists(path):
         #if this is true, the file exists; no reason to make another
         print "The image exists"
@@ -67,23 +87,29 @@ def changePicHex(top, sides, middle, background):
         print "Creating image..."
 
         #no need to add the hash back because it was never removed 
-        tree = changeTree(top, sides, middle, background)
+        tree = changeTree(top, sides, background)
         tree.write(path)
 
-r1=123
-g1=22
-b1=202
+###################################################
+#uncomment the next 13 lines if you have RGB values
+#r1=142
+#g1=151
+#b1=157
 
-r2=202
-g2=123
-b2=22
+#r2=122
+#g2=0
+#b2=60
 
-r3=123
-g3=202
-b3=22
+#r3=255
+#g3=255
+#b3=255
 
-r4=22
-g4=202
-b4=123
+#changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3)
 
-changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4)
+##################################################
+#uncomment the next 5 lines if you have HEX values
+#top="#fdBF57"
+#sides="#193989"
+#background="#231F20"
+
+#changePicHex(top,sides,background)
