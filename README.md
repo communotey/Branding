@@ -37,6 +37,11 @@ Use the inverted template:
 2. Fill in the outside of the triangle with white
 3. Tweet it to us [@communotey](https://twitter.com/communotey) or Print it out
 
+####Make your own logo colours in Python
+
+1. Get Python
+2. Go to the folder `./Text Logo` and follow the instructions in the file `logo_change_readme.md`
+
 ###Technical Details
 
 ####Colours:
