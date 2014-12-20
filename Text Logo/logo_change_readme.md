@@ -20,7 +20,13 @@ If you have rgb (red, green, blue) colour values (0-255), follow this scheme of 
 * sides: `int r2`,`int g2`, `int b2`
 * background: `int r4`,`int g4`, `int b4`
 
-`changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4)`
+`changePicRGB(r1,g1,b1, r2,g2,b2, r4,g4,b4)`
+
+If you want to have bottom and top separate: 
+
+* bottom: `int r3`,`int g3`, `int b3`
+
+`changePicRGB4(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4)`
 
 *Note: if you want to leave the dark black line, make background = `35, 31, 32`*
 
@@ -33,5 +39,11 @@ If you have hex (#231f20) colour values, follow this scheme of inputs:
 * background: `str background`
 
 `changePicHex(top, sides, background)`
+
+If you want to have bottom and top separate: 
+
+* bottom: `str bottom`
+
+`changePicHex(top, sides, bottom, background)`
 
 *Note: if you want to leave the dark black line, make background = `#231f20`*
