@@ -126,3 +126,10 @@ def changePicHex4(top,sides, bottom, background):
 #background="#231F20"
 
 #changePicHex(top,sides,background)
+
+#################################################
+top = "#0000FF"
+sides = "#CC00CC"
+bottom = "#FFFF00"
+background = "#00FF00"
+changePicHex4(top, sides, bottom, background)

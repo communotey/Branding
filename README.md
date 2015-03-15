@@ -23,7 +23,7 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 2.5 Li
 Note: To be accurate with the colours of the institution that you would like to colour it, I recommend you look up the branding manual of the company or sample from a logo on the company website.
 
 ####Icon with Border
-1. Download the picture onto your computer ![template](/Colour%20Schemes/Templates/logo_bw.png)
+1. Download the picture onto your computer ![template](Colour%20Schemes/Templates/logo_bw.png)
 2. Fill in the colours
 3. Tweet it to us [@communotey](https://twitter.com/communotey) or Print it out
 
@@ -31,7 +31,7 @@ Note: To be accurate with the colours of the institution that you would like to 
 
 Use the inverted template:
 
-![inverted template](/Colour%20Schemes/Templates/logo_bw_invert.png)
+![inverted template](Colour%20Schemes/Templates/logo_bw_invert.png)
 
 1. Fill in the black parts inside the triangle
 2. Fill in the outside of the triangle with white
