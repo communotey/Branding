@@ -44,6 +44,8 @@ Use the inverted template:
 
 ###Technical Details
 
+**Font**: Josefin Sans
+
 ####Colours:
 
 The official colours are as follows:
@@ -63,3 +65,4 @@ The official colours are as follows:
 * The thickness of the outline is 1/5 the side length of the smaller triangle
 * The centre-point of the curve can be found by taking the thickness of the outline, multiplying that by 2.5 and going that distance down from the top of the larger triangle (including outline)
 * It's probably easier if you just use the vector, though
+
