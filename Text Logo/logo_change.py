@@ -30,10 +30,10 @@ def rgb2Hex(r,g,b):
 
 ###############################################
 # where the action happens
-def changeTree(top, sides, bottom, background):
+def changeTree(top, sides, bottom):
 
     #cut out the hash
-    path = "triangle_"+top[1:]+"_"+sides[1:]+"_"+bottom[1:]+"_"+background[1:]+".svg"
+    path = "triangle_"+top[1:]+"_"+sides[1:]+"_"+bottom[1:]+".svg"
     if exists(path):
         #if this is true, the file exists; no reason to make another
         print "The image exists"
@@ -45,63 +45,34 @@ def changeTree(top, sides, bottom, background):
         for element in tree.iter():
             if element.get('id') == 'sides':
                 element.set('fill', sides)
-                element.set('stroke', background)
 
             elif element.get('id') == 'bottom':
                 element.set('fill', bottom)
-                element.set('stroke', background)
 
             elif element.get('id') == 'top':
                 element.set('fill', top)
-                element.set('stroke', background)
 
         tree.write(path)
-
 
 ##########################################################
 # if given rgb, you have to convert it to hex and it's fun
 def changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3):
-    top = rgb2Hex(r1,g1,b1)         #top
-    sides = rgb2Hex(r2,g2,b2)       #sides
-    bottom = top                    #make top/bottom same colour
-    background = rgb2Hex(r3,g3,b3)  #line should be your background colour
+    top = rgb2Hex(r1,g1,b1)
+    sides = rgb2Hex(r2,g2,b2)
+    bottom = rgb2Hex(r3,g3,b3)
         
-    tree = changeTree(top, sides, top, background)
+    tree = changeTree(top, sides, bottom)
         
 #########################################
 # if given the hex values, keep it in hex
-def changePicHex(top, sides, background):
-
-    #lower case for standards sake
-    top = top.lower()
-    sides = sides.lower()
-    bottom = top                    #make top/bottom same colour
-    background = background.lower()
-
-    tree = changeTree(top, sides, bottom, background)
-
-##########################################################
-# change all 4 colours in rgb
-def changePicRGB4(r1,g1,b1, r2,g2,b2, r3,g3,b3, r4,g4,b4):
-
-    top = rgb2Hex(r1,g1,b1)         #top
-    sides = rgb2Hex(r2,g2,b2)       #sides
-    bottom = rgb2Hex(r3,g3,b3)      #bottom
-    background = rgb2Hex(r4,g4,b4)  #line should be your background colour
-    
-    tree = changeTree(top, sides, bottom, background)
-
-#################################################
-# change all 4 colours in hex
-def changePicHex4(top,sides, bottom, background):
+def changePicHex(top, sides, bottom):
 
     #lower case for standards sake
     top = top.lower()
     sides = sides.lower()
     bottom = bottom.lower()
-    background = background.lower()
-    
-    tree = changeTree(top, sides, bottom, background)
+
+    tree = changeTree(top, sides, bottom)
 
 ###################################################
 #uncomment the next 13 lines if you have RGB values
@@ -113,23 +84,16 @@ def changePicHex4(top,sides, bottom, background):
 #g2=0
 #b2=60
 
-#r3=255
-#g3=255
-#b3=255
+#r3=142
+#g3=151
+#b3=157
 
 #changePicRGB(r1,g1,b1, r2,g2,b2, r3,g3,b3)
 
 ##################################################
-#uncomment the next 5 lines if you have HEX values
-#top="#fdBF57"
-#sides="#193989"
-#background="#231F20"
+    
+top="#fdBF57"
+sides="#193989"
+bottom="#fdBF57"
 
-#changePicHex(top,sides,background)
-
-#################################################
-top = "#0000FF"
-sides = "#CC00CC"
-bottom = "#FFFF00"
-background = "#00FF00"
-changePicHex4(top, sides, bottom, background)
+changePicHex(top,sides,bottom)
