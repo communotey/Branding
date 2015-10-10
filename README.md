@@ -53,7 +53,7 @@ The official colours are as follows:
 ![Colour map](/Colour%20Schemes/logo_bw_label.png)
 
 1. The green section: rgb(34,177,76)
-2. The red section: rgb(237,28,36)
+2. The red section: rgb(217,13,20)
 3. The blue section: rgb(0,162,232)
 
 ####Details of the shape
