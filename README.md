@@ -44,7 +44,8 @@ Use the inverted template:
 
 ###Technical Details
 
-**Font**: Josefin Sans
+* **Font**: Josefin Sans
+* Height of symbol should match the height of the t of communote
 
 ####Colours:
 
