@@ -45,7 +45,8 @@ Use the inverted template:
 ###Technical Details
 
 * **Font**: Josefin Sans
-* Height of symbol should match the height of the t of communote
+* **Font-Size**: font height of tallest letter should match the height of the symbol
+* **Spacing**: the space between the symbol and the text should be the same as the spacing between the letters
 
 ####Colours:
 
