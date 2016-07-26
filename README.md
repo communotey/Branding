@@ -68,3 +68,7 @@ The official colours are as follows:
 * The centre-point of the curve can be found by taking the thickness of the outline, multiplying that by 2.5 and going that distance down from the top of the larger triangle (including outline)
 * It's probably easier if you just use the vector, though
 
+###Questions
+
+If you have any questions or suggestions, post it as an issue!
+
