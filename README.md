@@ -12,22 +12,22 @@ This work is licensed under a [Creative Commons Attribution-NonCommercial 2.5 Li
 * You are not allowed to overprint type, photos, or elements over the brandmark.
 * You are not allowed to change the dimension ratio within 90% accuracy, which means you're free to try to draw out the symbol even if you're bad at drawing, have an unsteady hand, or if you make an accident.
 
-###Freedoms
+### Freedoms
 
 * You are free to change the size and blow up the vectors as much as you want
 * You are free to copy and reuse any of the graphics (noncommercially) as long as you tell people where they're from. That is, you don't need permission to post these pictures on your website (and hotlinking with <img> is fine); just include a link back to this page.
 * You are free to change the colours of the shapes as much as you want.
 
-###How to use the Colouring Sheets (in the `Colour Schemes` Folder)
+### How to use the Colouring Sheets (in the `Colour Schemes` Folder)
 
 Note: To be accurate with the colours of the institution that you would like to colour it, I recommend you look up the branding manual of the company or sample from a logo on the company website.
 
-####Icon with Border
+#### Icon with Border
 1. Download the picture onto your computer ![template](Colour%20Schemes/Templates/logo_bw.png)
 2. Fill in the colours
 3. Tweet it to us [@communotey](https://twitter.com/communotey) or Print it out
 
-####Icon without border
+#### Icon without border
 
 Use the inverted template:
 
@@ -37,18 +37,18 @@ Use the inverted template:
 2. Fill in the outside of the triangle with white
 3. Tweet it to us [@communotey](https://twitter.com/communotey) or Print it out
 
-####Make your own logo colours in Python
+#### Make your own logo colours in Python
 
 1. Get Python
 2. Go to the folder `./Text Logo` and follow the instructions in the file `logo_change_readme.md`
 
-###Technical Details
+### Technical Details
 
 * **Font**: Josefin Sans
 * **Font-Size**: font height of tallest letter should match the height of the symbol
 * **Spacing**: the space between the symbol and the text should be the same as the spacing between the letters
 
-####Colours:
+#### Colours:
 
 The official colours are as follows:
 
@@ -58,7 +58,7 @@ The official colours are as follows:
 2. The red section: rgb(217,13,20)
 3. The blue section: rgb(0,162,232)
 
-####Details of the shape
+#### Details of the shape
 *In progress*
 
 * The larger and smaller triangles are both equilateral triangles
@@ -68,7 +68,7 @@ The official colours are as follows:
 * The centre-point of the curve can be found by taking the thickness of the outline, multiplying that by 2.5 and going that distance down from the top of the larger triangle (including outline)
 * It's probably easier if you just use the vector, though
 
-###Questions
+### Questions
 
 If you have any questions or suggestions, post it as an issue!
 
