@@ -7,7 +7,7 @@ We love [the seafoam theme](https://kuler.adobe.com/Seafoam-color-theme-3883656/
 
 This work is licensed under a [Creative Commons Attribution-NonCommercial 2.5 License](http://creativecommons.org/licenses/by-nc/2.5/). See the LICENSE file. There are also other restrictions of using the graphics in this folder.
 
-###Restrictions
+### Restrictions
 
 * You are not allowed to overprint type, photos, or elements over the brandmark.
 * You are not allowed to change the dimension ratio within 90% accuracy, which means you're free to try to draw out the symbol even if you're bad at drawing, have an unsteady hand, or if you make an accident.
@@ -44,7 +44,7 @@ Use the inverted template:
 
 ### Technical Details
 
-* **Font**: Josefin Sans
+* **Font**: Josefin Sans Light
 * **Font-Size**: font height of tallest letter should match the height of the symbol
 * **Spacing**: the space between the symbol and the text should be the same as the spacing between the letters
 
